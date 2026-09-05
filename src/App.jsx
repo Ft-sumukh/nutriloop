@@ -10,11 +10,11 @@ import HealthTimeline from './components/HealthTimeline';
 import SubscriptionPage from './components/SubscriptionPage';
 import PitchDeckMode from './components/PitchDeckMode';
 import AICopilotDrawer from './components/AICopilotDrawer';
-import { MessageSquare, ShieldCheck, Activity, HeartPulse } from 'lucide-react';
+import { MessageSquare, ShieldCheck, Activity } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('landing');
-  const [showDemoTour, setShowDemoTour] = useState(true);
+  const [showDemoTour, setShowDemoTour] = useState(false);
   const [isCopilotOpen, setIsCopilotOpen] = useState(false);
   const [isRetestMode, setIsRetestMode] = useState(false);
   const [activeReportType, setActiveReportType] = useState('baseline');
@@ -42,7 +42,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070C1E] text-slate-100 flex flex-col font-sans selection:bg-brand-emerald/25 selection:text-brand-emerald">
+    <div className="min-h-screen bg-[#F5FAF7] text-slate-900 flex flex-col font-sans selection:bg-brand-emerald/25 selection:text-brand-emerald">
       
       {/* Top Navbar */}
       <Navbar
@@ -154,20 +154,20 @@ export default function App() {
       />
 
       {/* Footer */}
-      <footer className="bg-brand-navy/90 border-t border-brand-border/60 py-8 px-4 sm:px-6 lg:px-8 text-xs text-slate-400 mt-auto">
+      <footer className="bg-white border-t border-emerald-100 py-8 px-4 sm:px-6 lg:px-8 text-xs text-slate-500 mt-auto">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-3">
             <div className="w-7 h-7 rounded-lg bg-brand-emerald/20 text-brand-emerald flex items-center justify-center font-bold">
               <Activity className="w-4 h-4" />
             </div>
             <div>
-              <span className="text-white font-bold">NutriLoop</span>
+              <span className="text-slate-900 font-bold">NutriLoop</span>
               <span className="text-slate-500 ml-2">AI Preventive Health Operating System</span>
             </div>
           </div>
 
           <div className="flex items-center space-x-4 text-[11px]">
-            <span className="flex items-center space-x-1.5 text-slate-300">
+            <span className="flex items-center space-x-1.5 text-slate-600">
               <ShieldCheck className="w-4 h-4 text-brand-emerald" />
               <span>Clinician Review Guardrail Active</span>
             </span>
@@ -176,7 +176,7 @@ export default function App() {
           </div>
 
           <div className="text-[10px] text-slate-500 text-center md:text-right">
-            Non-diagnostic wellness decision support • Estimated physiological trajectories
+            Personal wellness insights • Not a substitute for medical advice
           </div>
         </div>
       </footer>

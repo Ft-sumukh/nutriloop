@@ -33,7 +33,7 @@ export default function Navbar({
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#070C1E]/95 backdrop-blur-md border-b border-brand-border/60">
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-emerald-100">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
@@ -47,12 +47,12 @@ export default function Navbar({
             </div>
             <div>
               <div className="flex items-center space-x-1.5">
-                <span className="text-xl font-bold tracking-tight text-white">Nutri<span className="text-brand-emerald">Loop</span></span>
-                <span className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">
+                <span className="text-xl font-bold tracking-tight text-slate-900">Nutri<span className="text-brand-emerald">Loop</span></span>
+                <span className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-50 text-brand-emerald border border-emerald-100">
                   YC26
                 </span>
               </div>
-              <p className="text-[10px] text-slate-400 -mt-0.5 hidden sm:block">AI Preventive Health Operating System</p>
+              <p className="text-[10px] text-slate-500 -mt-0.5 hidden sm:block">Your everyday health companion</p>
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export default function Navbar({
                   className={`relative px-3 py-2 rounded-lg text-xs font-medium transition-all flex items-center space-x-1.5 ${
                     isActive 
                       ? 'bg-brand-emerald/15 text-brand-emerald font-semibold shadow-sm border border-brand-emerald/30' 
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-emerald-50'
                   }`}
                 >
                   <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-brand-emerald' : 'text-slate-400'}`} />
@@ -92,8 +92,8 @@ export default function Navbar({
               onClick={() => setActiveTab('pitch')}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all border ${
                 activeTab === 'pitch'
-                  ? 'bg-brand-purple text-white border-brand-purple shadow-lg shadow-brand-purple/30'
-                  : 'bg-brand-purple/15 text-purple-300 border-brand-purple/30 hover:bg-brand-purple/25'
+                  ? 'bg-slate-900 text-white border-slate-900 shadow-lg shadow-slate-200'
+                  : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
               }`}
             >
               <Presentation className="w-3.5 h-3.5" />
@@ -106,8 +106,8 @@ export default function Navbar({
               onClick={() => setShowDemoTour(!showDemoTour)}
               className={`px-2.5 py-1.5 rounded-lg text-xs font-medium flex items-center space-x-1 border transition-all ${
                 showDemoTour
-                  ? 'bg-brand-cyan/20 text-brand-cyan border-brand-cyan/40'
-                  : 'bg-slate-800/80 text-slate-300 border-slate-700 hover:text-white'
+                  ? 'bg-cyan-50 text-cyan-700 border-cyan-200'
+                  : 'bg-white text-slate-500 border-slate-200 hover:text-slate-800'
               }`}
               title="Toggle Guided 3-Minute Demo Tour Bar"
             >
@@ -118,7 +118,7 @@ export default function Navbar({
             {/* AI Copilot Trigger */}
             <button
               onClick={onOpenCopilot}
-              className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-brand-emerald to-brand-cyan text-[#070C1E] font-semibold text-xs flex items-center space-x-1.5 hover:shadow-lg hover:shadow-brand-emerald/20 transition-all hover:scale-[1.02]"
+              className="px-3 py-1.5 rounded-lg bg-brand-emerald text-white font-semibold text-xs flex items-center space-x-1.5 hover:bg-emerald-700 hover:shadow-lg hover:shadow-emerald-100 transition-all hover:scale-[1.02]"
             >
               <MessageSquare className="w-3.5 h-3.5 stroke-[2.5]" />
               <span>Ask Copilot</span>
@@ -128,7 +128,7 @@ export default function Navbar({
         </div>
 
         {/* Mobile Navigation bar */}
-        <div className="flex lg:hidden overflow-x-auto py-2 border-t border-slate-800 space-x-1 scrollbar-none">
+        <div className="flex lg:hidden overflow-x-auto py-2 border-t border-emerald-50 space-x-1 scrollbar-none">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -137,7 +137,7 @@ export default function Navbar({
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
                 className={`px-2.5 py-1 rounded-md text-[11px] whitespace-nowrap flex items-center space-x-1 ${
-                  isActive ? 'bg-brand-emerald/20 text-brand-emerald font-semibold border border-brand-emerald/30' : 'text-slate-400'
+                  isActive ? 'bg-emerald-50 text-brand-emerald font-semibold border border-emerald-100' : 'text-slate-500'
                 }`}
               >
                 <Icon className="w-3 h-3" />

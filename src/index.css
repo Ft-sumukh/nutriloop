@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-brand-dark text-slate-100 antialiased font-sans selection:bg-brand-emerald/30 selection:text-brand-emerald;
+    @apply bg-[#F5FAF7] text-slate-900 antialiased font-sans selection:bg-brand-emerald/30 selection:text-brand-emerald;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -16,14 +16,14 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #070C1E;
+  background: #f5faf7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1F2D54;
+  background: #b8d8c8;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334575;
+  background: #7bb699;
 }
 
 .glow-emerald {
@@ -35,9 +35,9 @@
 }
 
 .glass-card {
-  background: rgba(18, 28, 56, 0.7);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(36, 52, 99, 0.7);
+  border: 1px solid rgba(185, 220, 201, 0.8);
 }
 
 .glass-card-hover {
